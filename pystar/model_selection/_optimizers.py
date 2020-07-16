@@ -1,4 +1,4 @@
-from pystar.base.base import BaseModel
+from pystar.base import BaseModel
 
 
 class GridSearch(BaseModel):

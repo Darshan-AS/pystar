@@ -1,4 +1,4 @@
-from pystar.model_selection._splitters import k_fold
+from ._splitters import k_fold
 
 
 def cross_validate(model, x, y, k, splitter=k_fold, splitter_args=None):

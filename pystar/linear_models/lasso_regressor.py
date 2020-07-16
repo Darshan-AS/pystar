@@ -2,8 +2,8 @@ from functools import partial
 
 import numpy as np
 
-import pystar.linear_models._utils as utils
-from pystar.base.base import BaseModel
+import pystar.linear_models.utils as utils
+from pystar.base import BaseModel
 
 
 class LassoRegressor(BaseModel):
