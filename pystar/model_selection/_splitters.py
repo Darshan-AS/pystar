@@ -1,5 +1,5 @@
 def k_fold(x, y=None, k=2, **kwargs):
-    assert x.shape[0] != y.shape[0]
+    assert x.shape[0] == y.shape[0]
 
     for i in range(0, x.shape[0], k):
         x_validate, y_validate = x[i: i + k], y[i: i + k]

@@ -4,7 +4,7 @@ import numpy as np
 def pre_process_data(x, y=None):
     x, y = convert_to_numpy(x), convert_to_numpy(y)
     x = np.column_stack((np.ones(x.shape[0]), x))
-    return (x, y) if y else x
+    return (x, y) if isinstance(y, np.ndarray) else x
 
 
 def convert_to_numpy(data):
@@ -13,11 +13,6 @@ def convert_to_numpy(data):
 
 def calculate_output(x, weights):
     return np.dot(x, weights)
-
-
-def rss(y_true, y_pred):
-    errors = y_true - y_pred
-    return np.dot(errors, errors)
 
 
 def gradient_descent(x_train, y_train, step_size, num_iterations, derivative_func):
